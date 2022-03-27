@@ -65,7 +65,7 @@ function showErrands(errands) {
     return errands.map(errandSaved => {
         const position = errands.indexOf(errandSaved);
         contentErrand.innerHTML += `
-                 <td>${position + 1}<td>
+                 <td>${position + 1}</td>
                  <td>${errandSaved.description}</td> 
                  <td>${errandSaved.detailing}</td> 
                  <td>
