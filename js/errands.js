@@ -2,7 +2,7 @@ const description = document.getElementById('description');
 const detailing = document.getElementById('detailing');
 const contentErrand = document.getElementById('content-errand');
 
-axios.defaults.baseURL = 'https://growdev-scrapbook-front-end.herokuapp.com/';
+axios.defaults.baseURL = 'https://growdev-scrapbook-back-end.herokuapp.com';
 
 async function loadErrands() {
     const { data } = await axios.get('/errands');
