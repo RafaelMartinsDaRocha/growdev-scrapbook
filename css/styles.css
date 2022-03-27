@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica';
+    font-size: 1.7vh;
+}
+
+#description-error, #detailing-error {
+    font-size: 1.4vh;
+    color: red;
+}
+
+.message-error-errand {
+    position: relative;
+}
+
+#detailing-error {
+    /* margin-left: 35.5%; */
+    position: absolute;
+    left: 35.3%;
+    top: 12%;
+
+}
+
+.error {
+    border: 1px solid #f00;
+}
+
+.container-errand {
+    width: 70%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+}
+
+.form-errands {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    justify-content: space-between;
+}
+
+.input-errands {
+    width: 100%;
+}
+
+#description {
+    width: 30%;
+    margin-right: 5%;
+    height: 4vh;
+}
+
+#detailing {
+    width: 64.6%;
+    height: 4vh;
+}
+
+.button-save {
+    height: 4vh;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.2vh;
+    background-color: #1859BF;
+    border: 0px;
+    border-radius: 8%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.button-delete {
+    height: 4vh;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.2vh;
+    background-color: #1e90ff;
+    border: 0px;
+    border-radius: 8%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.button-edit {
+    height: 4vh;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.2vh;
+    background-color: #00bfff;
+    border: 0px;
+    border-radius: 8%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
