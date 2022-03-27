@@ -2,8 +2,10 @@ const description = document.getElementById('description');
 const detailing = document.getElementById('detailing');
 const contentErrand = document.getElementById('content-errand');
 
+axios.defaults.baseURL = 'https://growdev-scrapbook-front-end.herokuapp.com/';
+
 async function loadErrands() {
-    const { data } = await axios.get('http://localhost:8080/errands');
+    const { data } = await axios.get('/errands');
     showErrands(data);
 };
 
@@ -19,7 +21,7 @@ async function onSaveErrand(event) {
     detailing.classList.remove('error');
     
     try {
-        const { status } = await axios.get('http://localhost:8080/errands');
+        const { status } = await axios.get('/errands');
         const id = document.getElementById('errand-id');
         const successStatus = 300;
     
@@ -30,10 +32,10 @@ async function onSaveErrand(event) {
 
         if (status < successStatus) {
             if (id.value) {
-                await axios.put(`http://localhost:8080/errands/${id.value}`, errand);
+                await axios.put(`/errands/${id.value}`, errand);
         
             } else {
-                await axios.post('http://localhost:8080/errands', errand);
+                await axios.post('/errands', errand);
             }
 
             description.value = '';
@@ -77,13 +79,13 @@ function showErrands(errands) {
 }
 
 async function deleteErrand(id) {
-await axios.delete(`http://localhost:8080/errands/${id}`)
+await axios.delete(`/errands/${id}`)
 
     loadErrands();
 }
 
 async function editErrand(id) {
-    const { data } = await axios.get('http://localhost:8080/errands');
+    const { data } = await axios.get('/errands');
     const uploadErrand = data.find(errand => errand.id === id);
 
     const errand = {
@@ -92,7 +94,7 @@ async function editErrand(id) {
         detailing: document.getElementById('detailing').value = uploadErrand.detailing
     };
     
-    await axios.put(`http://localhost:8080/errands/${id}`, errand)
+    await axios.put(`/errands/${id}`, errand)
     
     loadErrands();
 }
