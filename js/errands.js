@@ -98,3 +98,4 @@ async function editErrand(id) {
     
     loadErrands();
 }
+
